@@ -1,0 +1,22 @@
+# Create a Django project and app
+django-admin startproject task_manager
+cd task_manager
+python manage.py startapp tasks
+
+# Install required dependencies
+pip install django-allauth django-oauth-toolkit google-auth python-decouple
+
+# Run initial migrations
+python manage.py migrate
+
+# Create migrations for the Task model and apply them
+python manage.py makemigrations
+python manage.py migrate
+
+# Initialize Git and push to GitHub
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
